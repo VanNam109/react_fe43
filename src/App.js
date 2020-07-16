@@ -9,18 +9,20 @@ import EventBinding from './EventBinding/EventBinding';
 import RenderWithState from './RenderWithState/RenderWithState';
 import BaiTapChonXe from './BaiTapChonXe/BaiTapChonXe';
 import RenderWithMap from './RenderWithMap/RenderWithMap';
+import DemoProps from './Props/DemoProps';
 
 function App() {
   return (
     <div className="App">
-        {/* <BaiTapLayout /> */}
+        <BaiTapLayout />
         {/* <BaiTapLayout2 /> */}
         {/* <DataBinding />
         <h1 className="header">hello fe43</h1> */}
         {/* <EventBinding/> */}
         {/* <RenderWithState/> */}
         {/* <BaiTapChonXe/> */}
-        <RenderWithMap/>
+        {/* <RenderWithMap/> */}
+        {/* <DemoProps/> */}
         
     </div>
   );

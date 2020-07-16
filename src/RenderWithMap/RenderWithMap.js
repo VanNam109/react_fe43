@@ -13,7 +13,6 @@ export default class RenderWithMap extends Component {
         // for (let index = 0; index < this.productList.length; index++) {
         //     //Duyệt mảng lấy ra từng phần tử
         //     let product = this.productList[index];
-
         //     //Từ product tạo thẻ tr
         //     let trProduct =
         //         <table>
