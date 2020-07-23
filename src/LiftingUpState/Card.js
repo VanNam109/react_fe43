@@ -10,11 +10,25 @@ export default class Card extends Component {
             <img src={item.hinhAnh} alt="asda" style={{ width: 100 }} />
           </td>
           <td>{item.tenSP}</td>
-          <td>{item.giaBan}</td>
+          <td>{item.giaBan.toLocaleString()}</td>
           <td>
-            <button className="btn btn-info">-</button>
+            <button
+              className="btn btn-info"
+              onClick={() => {
+                this.props.tangGiamSoLuong(item.maSP, false);
+              }}
+            >
+              -
+            </button>
             <span className="mx-2">{item.soLuong}</span>
-            <button className="btn btn-info">+</button>
+            <button
+              className="btn btn-info"
+              onClick={() => {
+                this.props.tangGiamSoLuong(item.maSP, true);
+              }}
+            >
+              +
+            </button>
           </td>
           <td>17100000$</td>
           <td>
@@ -30,6 +44,13 @@ export default class Card extends Component {
         </tr>
       );
     });
+  };
+  tinhTongTien = () => {
+    return this.props.cardList
+      .reduce((tongTien, spGH, index) => {
+        return (tongTien += spGH.soLuong * spGH.giaBan);
+      }, 0)
+      .toLocaleString();
   };
   render() {
     return (
@@ -50,14 +71,12 @@ export default class Card extends Component {
           <tbody>{this.renderListCard()}</tbody>
           <tfoot>
             <tr>
-              <td />
-              <td />
-              <td />
-              <td />
-              <td />
-              <td>32300000</td>
+            <td colSpan="5">
+              <td>Tổng tiền</td>
+              <td>{this.tinhTongTien()}</td>
+            </td>
             </tr>
-          </tfoot>
+          </tfoot>  
         </table>
       </div>
     );

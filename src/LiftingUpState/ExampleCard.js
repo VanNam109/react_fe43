@@ -10,6 +10,36 @@ export default class ExampleCard extends Component {
     cardList: [],
   };
 
+  //Xử lý tăng giảm số lượng
+  tangGiamSoLuong = (maSP, tangGiam) => {
+    //Tăng là true , giảm là false
+    // Tìm ra sản phẩm chứa maSP = với maSP tăng giảm số lượng click
+    // console.log('maSP', maSP);
+    // console.log('tangGiam' , tangGiam);
+
+    let gioHangCapNhat = [...this.state.cardList];
+
+    let index = gioHangCapNhat.findIndex(
+      (spGioHang) => spGioHang.maSP === maSP
+    );
+    if (index != -1) {
+      if (tangGiam) {
+        gioHangCapNhat[index].soLuong += 1;
+      } else {
+        if (gioHangCapNhat[index].soLuong > 1) {
+          gioHangCapNhat[index].soLuong -= 1;
+        } else {
+          alert("số lượng tối thiểu - 1");
+        }
+      }
+    }
+
+    // setSate làm tăng giảm số lượng
+    this.setState({
+      cardList: gioHangCapNhat,
+    });
+  };
+
   handleDelete = (card) => {
     /**
      * 1/tìm vị trí
@@ -65,6 +95,7 @@ export default class ExampleCard extends Component {
       <div>
         <div className="container">
           <Card
+            tangGiamSoLuong={this.tangGiamSoLuong}
             handleDelete={this.handleDelete}
             cardList={this.state.cardList}
           />

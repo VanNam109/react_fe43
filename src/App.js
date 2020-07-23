@@ -11,6 +11,7 @@ import BaiTapChonXe from "./BaiTapChonXe/BaiTapChonXe";
 import RenderWithMap from "./RenderWithMap/RenderWithMap";
 import DemoProps from "./Props/DemoProps";
 import ExampleCard from "./LiftingUpState/ExampleCard";
+import BaiTapGioHang from "./BaiTapRedux/BaiTapGioHang/BaiTapGioHang";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       {/* <BaiTapChonXe/> */}
       {/* <RenderWithMap/> */}
       {/* <DemoProps/> */}
-      <ExampleCard />
+      {/* <ExampleCard /> */}
+      <BaiTapGioHang />
     </div>
   );
 }
