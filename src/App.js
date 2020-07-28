@@ -12,6 +12,8 @@ import RenderWithMap from "./RenderWithMap/RenderWithMap";
 import DemoProps from "./Props/DemoProps";
 import ExampleCard from "./LiftingUpState/ExampleCard";
 import BaiTapGioHang from "./BaiTapRedux/BaiTapGioHang/BaiTapGioHang";
+import GameBauCua from "./GameBauCua";
+
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
       {/* <RenderWithMap/> */}
       {/* <DemoProps/> */}
       {/* <ExampleCard /> */}
-      <BaiTapGioHang />
+      {/* <BaiTapGioHang /> */}
+      <GameBauCua/>
     </div>
   );
 }

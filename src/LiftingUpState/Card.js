@@ -70,13 +70,10 @@ export default class Card extends Component {
           </thead>
           <tbody>{this.renderListCard()}</tbody>
           <tfoot>
-            <tr>
-            <td colSpan="5">
-              <td>Tổng tiền</td>
-              <td>{this.tinhTongTien()}</td>
-            </td>
-            </tr>
-          </tfoot>  
+            <td colSpan="5"></td>
+            <td>Tổng tiền</td>
+            <td>{this.tinhTongTien()}</td>
+          </tfoot>
         </table>
       </div>
     );

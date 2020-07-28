@@ -24,6 +24,9 @@ class SanPham extends Component {
             >
               Xem chi tiết
             </button>
+            <button className="btn btn-danger">
+              Mua Hàng
+            </button>
           </div>
         </div>
       </div>
