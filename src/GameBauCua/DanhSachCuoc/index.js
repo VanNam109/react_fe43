@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import moduleName, {
+  tangGiamAction,
+} from "../../redux/actions/GameBauCuaAction";
 import { connect } from "react-redux";
 
 class DanhSachCuoc extends Component {
@@ -60,12 +63,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     //Key là props of component : value là method send action to reducer
     tangGiamMucCuoc: (ma, tangGiam) => {
-      const actions = {
-        type: "TANG_GIAM",
-        ma: ma,
-        tangGiam: tangGiam,
-      };
-      dispatch(actions);
+      dispatch(tangGiamAction(ma, tangGiam));
     },
   };
 };

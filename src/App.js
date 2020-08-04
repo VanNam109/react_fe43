@@ -13,6 +13,8 @@ import DemoProps from "./Props/DemoProps";
 import ExampleCard from "./LiftingUpState/ExampleCard";
 import BaiTapGioHang from "./BaiTapRedux/BaiTapGioHang/BaiTapGioHang";
 import GameBauCua from "./GameBauCua";
+import Form_Validation from "./Form_Validation/Form_Validation";
+import QLSV from "./Form_Validation/QLSV";
 
 
 function App() {
@@ -29,7 +31,10 @@ function App() {
       {/* <DemoProps/> */}
       {/* <ExampleCard /> */}
       {/* <BaiTapGioHang /> */}
-      <GameBauCua/>
+      {/* <GameBauCua/> */}
+      {/* <Form_Validation/> */}
+      <QLSV/>
+      
     </div>
   );
 }
